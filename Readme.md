@@ -8,7 +8,7 @@ Les différents binômes:
 REBRAB	Tassadit Bénard	Mathieu
 
 ## Model
-KHALDI	Haithem Tebib	Mazen
+KHALDI	Haithem TEBIB	Mazen
 
 ## Visualization
 MOUDEN	Hugo THERET	Tom
