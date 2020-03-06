@@ -12,3 +12,5 @@ KHALDI	Haithem TEBIB	Mazen
 
 ## Visualization
 MOUDEN	Hugo THERET	Tom
+
+https://docs.google.com/document/d/1hiIHSmZp1wcPIE-Qt967r8wiKODkz07fPgGKuXj9kRg/edit?usp=sharing
