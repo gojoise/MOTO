@@ -1,15 +1,13 @@
+#L'étape:
+#1) completer le template
+#    - choisir le preprocessing + model
+#    - choisir le bon pipeline: P_1(X)-> X_1; M_1(X_1) --------- (P_1(X)-> X_1) + (P_2(X) -> X_2); M_1(X_1 + X_2)
+#2) Tester: completer la fonction test
+#3) Generer la soumission sur codalab: 1) modifier model.py 2) lancer Readme.ipynb (original du starting kit): 2 zips (soumettre code_submission*.zip)
+#4) soumission sur chagrade
 
 
-L'étape:
-1) completer le template
-    - choisir le preprocessing + model
-    - choisir le bon pipeline: P_1(X)-> X_1; M_1(X_1) --------- (P_1(X)-> X_1) + (P_2(X) -> X_2); M_1(X_1 + X_2)
-2) Tester: completer la fonction test
-3) Generer la soumission sur codalab: 1) modifier model.py 2) lancer Readme.ipynb (original du starting kit): 2 zips (soumettre code_submission*.zip)
-4) soumission sur chagrade
-
-
-Pour soumettre votre code sur Codalab avec le preprocessing et modèle de regression de votre choix, il suffit de suivre le template pour ```sample_code_submission/model.py```:
+#Pour soumettre votre code sur Codalab avec le preprocessing et modèle de regression de votre choix, il suffit de suivre le template pour ```sample_code_submission/model.py```:
 
 
  ```python=3.5
