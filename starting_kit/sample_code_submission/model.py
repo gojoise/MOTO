@@ -15,7 +15,6 @@
 import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
 import numpy as np
-from sklearn import BaseEstimator
 from sklearn.ensemble import GradientBoostingRegressor
 
 class model (BaseEstimator):
