@@ -31,13 +31,11 @@ class model (BaseEstimator):
         self.is_trained = False
 
 
-<<<<<<< HEAD
+
         self.preprocess = VarianceThreshold(threshold=(.8 * (1 - .8))) # Ex. PCA()
-        self.mod = VOTRE_MODELE_REGRESSION # Ex. DecisionTreeRegressor()
-=======
-        self.preprocess = VOTRE_PREPROCESSING # Ex. PCA()
         self.mod = GradientBoostingRegressor(max_depth=10,random_state=0, n_estimators=1000) # Ex. DecisionTreeRegressor()
->>>>>>> e80acc1f6a49f4f30fccc2e30c025320f3ed11b0
+
+
 
     def fit(self, X, y):
         '''
