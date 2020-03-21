@@ -17,6 +17,8 @@ from os.path import isfile
 import numpy as np
 from sklearn.base import BaseEstimator
 from sklearn.ensemble import GradientBoostingRegressor
+from sklearn import preprocessing
+from sklearn.feature_selection import VarianceThreshold
 
 class model (BaseEstimator):
     def __init__(self):
