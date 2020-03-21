@@ -96,7 +96,7 @@ def test():
     # Pour tester cette fonction *test*, il suffit de lancer la commande ```python sample_code_submission/model.py```
 
     X_random = np.random.rand(38563,59)
-    Y_random = np.random.rand(38563,1)
+    Y_random = np.random.rand(38563)
 
     mod.fit(X_random, Y_random)
     Ytest=mod.predict(X_random)
