@@ -31,7 +31,7 @@ class model (BaseEstimator):
         self.is_trained = False
 
 
-        self.preprocess = VOTRE_PREPROCESSING # Ex. PCA()
+        self.preprocess = VarianceThreshold(threshold=(.8 * (1 - .8))) # Ex. PCA()
         self.mod = VOTRE_MODELE_REGRESSION # Ex. DecisionTreeRegressor()
 
     def fit(self, X, y):
