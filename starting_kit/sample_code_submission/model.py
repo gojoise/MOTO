@@ -10,7 +10,7 @@
 #Pour soumettre votre code sur Codalab avec le preprocessing et modèle de regression de votre choix, il suffit de suivre le template pour ```sample_code_submission/model.py```:
 
 
- ```python=3.5
+
 
 import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
