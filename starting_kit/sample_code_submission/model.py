@@ -17,7 +17,7 @@ Pour soumettre votre code sur Codalab avec le preprocessing et modèle de regres
 import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
 import numpy as np
-from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import GradientBoostingRegressor
 
 class model (BaseEstimator):
     def __init__(self):
@@ -32,7 +32,7 @@ class model (BaseEstimator):
 
 
         self.preprocess = VOTRE_PREPROCESSING # Ex. PCA()
-        self.mod = VOTRE_MODELE_REGRESSION # Ex. DecisionTreeRegressor()
+        self.mod = GradientBoostingRegressor(max_depth=10,random_state=0, n_estimators=1000) # Ex. DecisionTreeRegressor()
 
     def fit(self, X, y):
         '''
