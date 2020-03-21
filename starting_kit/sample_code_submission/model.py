@@ -55,7 +55,7 @@ class model (BaseEstimator):
         if X.ndim>1: self.num_feat = X.shape[1]
         if y.ndim>1: self.num_labels = y.shape[1]
 
-        X_preprocess = self.preprocess.fit_transform(X)
+        X_preprocess = self.preprocess.fit_transform(X,y)
         self.mod.fit(X_preprocess, y)
         self.is_trained = True
 
@@ -76,7 +76,7 @@ class model (BaseEstimator):
         y = np.zeros([num_test_samples, self.num_labels])
 
 
-        X_preprocess = self.preprocess.transform(X)
+        X_preprocess = self.preprocess.transform(X,y)
         y = self.mod.predict(X_preprocess)
         return y
 
@@ -94,8 +94,8 @@ def test():
     # 2 - Tester l'entrainement avec mod.fit(X_random, y_random)
     # 3 - Test la prediction: mod.predict(X_random)
     # Pour tester cette fonction *test*, il suffit de lancer la commande ```python sample_code_submission/model.py```
-    X_random = np.random.rand(38563,59)
-    Y_random = np.random.rand(38563,1)
+    X_random = np.random.rand(mod.num_train_samples,mod.num_feat)
+    Y_random = np.random.rand(mod.num_train_samples,1)
     mod.fit(X_random, Y_random)
     Ytest=mod.predict(X_random)
 if __name__ == "__main__":
