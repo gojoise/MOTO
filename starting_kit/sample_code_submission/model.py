@@ -14,7 +14,7 @@
 
 import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
-import numpy as np
+
 from sklearn.base import BaseEstimator
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn import preprocessing
@@ -55,7 +55,7 @@ class model (BaseEstimator):
         if X.ndim>1: self.num_feat = X.shape[1]
         if y.ndim>1: self.num_labels = y.shape[1]
 
-        X_preprocess = self.preprocess.fit_transform(X,y)
+        X_preprocess = self.preprocess.fit_transform(X)
         self.mod.fit(X_preprocess, y)
         self.is_trained = True
 
@@ -76,7 +76,7 @@ class model (BaseEstimator):
         y = np.zeros([num_test_samples, self.num_labels])
 
 
-        X_preprocess = self.preprocess.transform(X,y)
+        X_preprocess = self.preprocess.transform(X)
         y = self.mod.predict(X_preprocess)
         return y
 
@@ -95,7 +95,7 @@ def test():
     # 3 - Test la prediction: mod.predict(X_random)
     # Pour tester cette fonction *test*, il suffit de lancer la commande ```python sample_code_submission/model.py```
 
-    X_random = np.random.rand(38563,11)
+    X_random = np.random.rand(38563,59)
     Y_random = np.random.rand(38563,1)
 
     mod.fit(X_random, Y_random)
