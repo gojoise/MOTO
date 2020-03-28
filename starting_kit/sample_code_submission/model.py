@@ -33,7 +33,8 @@ class model (BaseEstimator):
 
 
 
-        self.preprocess = VarianceThreshold(threshold=(.8 * (1 - .8))) # Ex. PCA()
+        self.preprocess1 = VarianceThreshold(threshold=(.8 * (1 - .8))) # Ex. PCA()
+        self.preprocess2 = preprocessing.StandardScaler()
         self.mod = GradientBoostingRegressor(max_depth=10,random_state=0, n_estimators=1000) # Ex. DecisionTreeRegressor()
 
 
@@ -55,7 +56,10 @@ class model (BaseEstimator):
         if X.ndim>1: self.num_feat = X.shape[1]
         if y.ndim>1: self.num_labels = y.shape[1]
 
-        X_preprocess = self.preprocess.fit_transform(X)
+        X_preprocess = self.preprocess1.fit_transform(X)
+        self.preprocess2.mean_
+        self.preprocess2.scale
+        X_preprocess = self.preprocess2.fit.transform(X_preprocess)
         self.mod.fit(X_preprocess, y)
         self.is_trained = True
 
