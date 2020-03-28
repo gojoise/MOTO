@@ -60,7 +60,7 @@ class model (BaseEstimator):
         self.preprocess2.mean_
         self.preprocess2.scale
         X_preprocess = self.preprocess2.fit.transform(X_preprocess)
-        self.mod.fit(X_preprocess, y)
+        self.mod.fit(X_preprocess,y)
         self.is_trained = True
 
     def predict(self, X):
