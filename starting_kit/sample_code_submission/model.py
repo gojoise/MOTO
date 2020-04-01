@@ -57,7 +57,7 @@ class model (BaseEstimator):
         if y.ndim>1: self.num_labels = y.shape[1]
 
         X_preprocess = self.preprocess1.fit_transform(X)
-        X_preprocess = self.preprocess2.fit.transform(X_preprocess)
+        X_preprocess = self.preprocess2.fit_transform(X_preprocess)
         self.mod.fit(X_preprocess,y)
         self.is_trained = True
 
