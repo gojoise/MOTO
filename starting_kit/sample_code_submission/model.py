@@ -55,13 +55,14 @@ class model (BaseEstimator):
         '''
         if X.ndim>1: self.num_feat = X.shape[1]
         if y.ndim>1: self.num_labels = y.shape[1]
-        
+
         X_preprocess = self.preprocess1.fit_transform(X)
         #print(X_preprocess.shape)
-        X_preprocess = self.preprocess2.fit_transform(X)
+        X_preprocessFinal = self.preprocess2.fit_transform(X_preprocess)
+
         #print(X_preprocess.shape)
-        
-        self.mod.fit(X_preprocess,y)
+
+        self.mod.fit(X_preprocessFinal,y)
         self.is_trained = True
 
     def predict(self, X):
@@ -82,8 +83,8 @@ class model (BaseEstimator):
 
 
         X_preprocess = self.preprocess1.transform(X)
-        X_preprocess = self.preprocess2.transform(X_preprocess)
-        y = self.mod.predict(X_preprocess)
+        X_preprocessFinal = self.preprocess2.transform(X_preprocess)
+        y = self.mod.predict(X_preprocessFinal)
         return y
 
     def save(self, path="./"):
