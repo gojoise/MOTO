@@ -101,8 +101,9 @@ def test():
     # 2 - Tester l'entrainement avec mod.fit(X_random, y_random)
     # 3 - Test la prediction: mod.predict(X_random)
     # Pour tester cette fonction *test*, il suffit de lancer la commande ```python sample_code_submission/model.py```
-
-    X_random = np.random.rand(38563,59)
+    m1 = np.random.randn(38563,59)
+    m2 = np.random.randn(38563,59)
+    X_random= m1 + m2
     Y_random = np.random.rand(38563)
 
     mod.fit(X_random, Y_random)
