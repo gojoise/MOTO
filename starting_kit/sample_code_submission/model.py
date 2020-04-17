@@ -35,7 +35,7 @@ class model (BaseEstimator):
 
         self.preprocess1 = VarianceThreshold(threshold=(.8 * (1 - .8))) # Ex. PCA()
         self.preprocess2 = preprocessing.StandardScaler()
-        self.mod = GradientBoostingRegressor(max_depth=10,random_state=0, n_estimators=1000) # Ex. DecisionTreeRegressor()
+        self.mod = GradientBoostingRegressor(max_depth=10,random_state=0,min_samples_leaf=8,min_samples_split= 18, n_estimators=1000) # Ex. DecisionTreeRegressor()
 
 
 
